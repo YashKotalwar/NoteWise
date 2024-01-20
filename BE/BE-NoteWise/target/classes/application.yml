@@ -1,0 +1,46 @@
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAT7MOYZFTIRPRJCRN
+      secret-key: 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
+    region:
+      static: ap-south-1
+    stack:
+      auto: false
+    transcribe:
+      outputBucket: mys3bucketstorage3
+
+application:
+  bucket:
+    name: mys3bucketstorage3
+
+
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: true
+#      file-size-threshold: 500MB
+#      max-file-size: 500MB
+#      max-request-size: 500MB
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 500MB
+      max-file-size: 500MB
+      max-request-size: 500MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/meetingdb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+server:
+  port: 9090
+
